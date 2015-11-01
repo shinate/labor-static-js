@@ -1,10 +1,12 @@
 /**
  * 查找指定元素在数组内的索引
+ *
  * @file findout.js
+ * @author shinate | shine.wangrs@gmail.com
+ *
  * @param {Array} o
  * @param {String|Number|Object|Boolean|Function} value
  * @return {Array} 索引值的数组
- * @author Robin Young | yonglin@staff.sina.com.cn
  * @example
  * var li1 = ['a','b','c','a']
  * var li2 = NS.findout(li1,'a');

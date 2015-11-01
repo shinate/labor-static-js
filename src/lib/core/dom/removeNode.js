@@ -1,28 +1,11 @@
 /**
  * @param {String|HTML Element} node id or element
  */
-(function(global, __PN__, factory) {
-    /* CommonJS */
-    if ( typeof require === 'function' && typeof module === 'object' && module && typeof exports === 'object' && exports)
-        module['exports'] = factory();
-    /* AMD */
-    else if ( typeof define === 'function' && define['amd'])
-        define(function() {
-            return factory();
-        });
-    /* Global */
-    else if (global.__NS__ && (typeof global[global.__NS__] === 'object' || typeof global[global.__NS__] === 'function') && global[global.__NS__])
-        global[global.__NS__][__PN__] = global[global.__NS__][__PN__] || factory();
-    else
-        global[__PN__] = global[__PN__] || factory();
-
-})( window ? window : this, 'removeNode', function() {
-    return function(node) {
-        node = typeof node === 'string' ? document.getElementById(node) : node;
-        try {
-            node.parentNode.removeChild(node);
-        }
-        catch (e) {
-        }
-    };
-});
+module.exports = function (node) {
+    node = typeof node === 'string' ? document.getElementById(node) : node;
+    try {
+        node.parentNode.removeChild(node);
+    }
+    catch (e) {
+    }
+};

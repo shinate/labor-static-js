@@ -1,14 +1,14 @@
 /**
  * 删除数组中的空数据(like undefined/null/empty string)
+ *
  * @file clear.js
+ * @author shinate | shine.wangrs@gmail.com
+ *
  * @param {Array} o
  * @return {Array}
- * @author Robin Young | yonglin@staff.sina.com.cn
  * @example
  * var li = NS.clear([1, 2, 3, undefined]);
  * li === [1,2,3];
- *
- * [ section ]{_default_a74b90fe5_}
  */
 var findout = require('./findout');
 

@@ -1,17 +1,20 @@
 /**
- * 数组拆分
+ * Split an array
  *
- * section([1,2,3,4,5,6,7], 3) ==> [[1,2,3],[4,5,6],[7]]
+ * @file section.js
+ * @author shinate | shine.wangrs@gmail.com
+ *
+ * @param {array} a
+ * @param {number} length
+ * @returns {*}
+ *
+ * NS.section([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3], [4, 5, 6], [7]]
  */
-
-    /*@{{
-[ section ]{_default_a74b90fe5_}
-}}@*/
 var isArray = require('./isArray');
 
 module.exports = function (a, length) {
     if (!isArray(a)) {
-        throw 'Parameter must be an array';
+        throw new TypeError('Parameter must be an array');
     }
     if (!a.length) {
         return a;

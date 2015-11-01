@@ -8,9 +8,7 @@
  * @example
  * STK.core.dom.insertBefore($.E('test'),$.E('target'));
  */
-STK.register('core.dom.insertBefore', function($){
-	return function(node, target){
-		var parent = target.parentNode;
-		parent.insertBefore(node, target);
-	};
-});
+module.exports = function (node, target) {
+    var parent = target.parentNode;
+    parent.insertBefore(node, target);
+};

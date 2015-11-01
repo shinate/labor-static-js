@@ -1,8 +1,10 @@
 /**
  * @file indexOf.js
- * @param o
- * @param a
- * @returns {*}
+ * @author shinate | shine.wangrs@gmail.com
+ *
+ * @param {*} o
+ * @param {array} a
+ * @returns {number}
  */
 module.exports = function (o, a) {
     if (a.indexOf) {
