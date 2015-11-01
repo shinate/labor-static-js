@@ -9,11 +9,11 @@
  * STK.core.evt.fireEvent($.E('id'),'click');
  */
 module.exports = function(el, sEvent) {
-	if (_el.addEventListener) {//由于IE9下有两种事件模型，所以addEvent,removeEvent,fireEvent的判定方式要相同
+	if (el.addEventListener) {//由于IE9下有两种事件模型，所以addEvent,removeEvent,fireEvent的判定方式要相同
 		var evt = document.createEvent('HTMLEvents');
 		evt.initEvent(sEvent, true, true);
-		_el.dispatchEvent(evt);
+		el.dispatchEvent(evt);
 	} else {
-		_el.fireEvent('on' + sEvent);
+		el.fireEvent('on' + sEvent);
 	}
 };

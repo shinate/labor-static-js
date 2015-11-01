@@ -9,16 +9,7 @@
  * @example
  * var ev = STK.core.evt.fixEvent(window.event);
  */
-var $getEvent = require('getEvent');
-
-var fixTouchList = [
-	'clientX'
-	,'clientY'
-	,'pageX'
-	,'pageY'
-	,'screenX'
-	,'screenY'
-];
+var $getEvent = require('./getEvent');
 
 module.exports = function(e){
 	e = e || $getEvent();

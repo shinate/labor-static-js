@@ -6,7 +6,7 @@
  * @example
  * STK.core.evt.preventDefault();
  */
-var $getEvent = require('getEvent');
+var $getEvent = require('./getEvent');
 
 module.exports = function(e) {
 	e = e || $getEvent(e);

@@ -7,7 +7,7 @@
  * @example
  * STK.core.evt.stopEvent();
  */
-var $getEvent = require('getEvent');
+var $getEvent = require('./getEvent');
 
 module.exports = function(e) {
 

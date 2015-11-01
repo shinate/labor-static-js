@@ -13,7 +13,7 @@
  * 	console.log(e);
  * });
  */
-module.exports = function(el, type, fn) {
+module.exports = function (el, type, fn) {
     if (el == null || typeof fn !== "function") {
         return false;
     }

@@ -14,11 +14,11 @@ var ds = document.selection;
  * @param {HTMLElement} oElement 必选参数，Textarea对像
  */
 // TODO 
-it.selectionStart = function(oElement) {
+it.selectionStart = function (oElement) {
     if (!ds) {
         try {
             return oElement.selectionStart;
-        } catch(e) {
+        } catch (e) {
             return 0;
         }
     }
@@ -26,7 +26,7 @@ it.selectionStart = function(oElement) {
     var er1 = document.body.createTextRange();
     try {
         er1.moveToElementText(oElement);
-    } catch(e) {
+    } catch (e) {
     }
     for (s; er1.compareEndPoints("StartToStart", er) < 0; s++) {
         er1.moveStart('character', 1);
@@ -34,7 +34,7 @@ it.selectionStart = function(oElement) {
     return s;
 };
 
-it.selectionBefore = function(oElement) {
+it.selectionBefore = function (oElement) {
     return oElement.value.slice(0, it.selectionStart(oElement));
 };
 
@@ -44,7 +44,7 @@ it.selectionBefore = function(oElement) {
  * @param {Number}      iStart   必选参数, 起始位置
  * @param {Number}      iEnd     必选参数，结束位置
  */
-it.selectText = function(oElement, nStart, nEnd) {
+it.selectText = function (oElement, nStart, nEnd) {
     oElement.focus();
     if (!ds) {
         oElement.setSelectionRange(nStart, nEnd);
@@ -64,7 +64,7 @@ it.selectText = function(oElement, nStart, nEnd) {
  * @param {Number}      iStart      必选参数，插入位置
  * @param {Number}      iLength     非必选参数，替换长度
  */
-it.insertText = function(oElement, sInsertText, nStart, nLen) {
+it.insertText = function (oElement, sInsertText, nStart, nLen) {
     oElement.focus();
     nLen = nLen || 0;
     if (!ds) {
@@ -85,7 +85,7 @@ it.insertText = function(oElement, sInsertText, nStart, nLen) {
  * @param {String}      sInsertText 必选参数，插入的文本
  * 如果没有选择文本，则在最后插入
  */
-it.replaceText = function(oElement, sInsertText) {
+it.replaceText = function (oElement, sInsertText) {
     //alert(sInsertText);
     oElement.focus();
     var text = oElement.value;
@@ -112,7 +112,7 @@ it.replaceText = function(oElement, sInsertText) {
 /**
  * @param {object} 文本对象
  */
-it.getCursorPos = function(obj) {
+it.getCursorPos = function (obj) {
     var CaretPos = 0;
     if (!+"\v1") {//is IE?
         obj.focus();
@@ -133,10 +133,10 @@ it.getCursorPos = function(obj) {
 /**
  * @param {object} 文本对象
  */
-it.getSelectedText = function(obj) {
+it.getSelectedText = function (obj) {
     //alert(obj);
     var selectedText = '';
-    var getSelection = function(e) {
+    var getSelection = function (e) {
         if (e.selectionStart != undefined && e.selectionEnd != undefined)
             return e.value.substring(e.selectionStart, e.selectionEnd);
         else
@@ -159,7 +159,7 @@ it.getSelectedText = function(obj) {
  * setCursor(obj,5)第五个文字的后面
  * setCursor(obj,5,2)选中第五个之后2个文本
  */
-it.setCursor = function(obj, pos, coverlen) {
+it.setCursor = function (obj, pos, coverlen) {
     pos = pos == null ? obj.value.length : pos;
     coverlen = coverlen == null ? 0 : coverlen;
     obj.focus();
@@ -180,7 +180,7 @@ it.setCursor = function(obj, pos, coverlen) {
  * @param {int} pars.rcs Range cur start
  * @param {int} pars.rccl  Range cur cover length
  */
-it.unCoverInsertText = function(obj, str, pars) {
+it.unCoverInsertText = function (obj, str, pars) {
     pars = (pars == null) ? {} : pars;
     pars.rcs = pars.rcs == null ? obj.value.length : pars.rcs * 1;
     pars.rccl = pars.rccl == null ? 0 : pars.rccl * 1;
