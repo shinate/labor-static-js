@@ -30,6 +30,9 @@ var CONF = {
 
 gulp.task('unit', function () {
     gulp.src(CONF.src + '/**/*.js')
+        .pipe(function(){
+
+        })
         .pipe(gulp.dest(CONF.package))
 });
 
