@@ -13,7 +13,8 @@
 		'method': 'get', // post or get
 		'asynchronous': true,
 		'contentType': 'application/x-www-form-urlencoded',
-		'responseType': 'text'// xml or text or json
+		'responseType': 'text', // xml or text or json
+        'nocache': false
 	};
  * @return {Void}
  * @author Robin Young | yonglin@staff.sina.com.cn
