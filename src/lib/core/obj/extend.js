@@ -1,4 +1,5 @@
 var hasProp = require('./hasProp');
+
 module.exports = function () {
     var args = Array.prototype.slice.call(arguments);
     if (args.length === 0) {

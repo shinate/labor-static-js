@@ -1,14 +1,13 @@
 /**
  * query to json
- * @id STK.core.json.queryToJson
- * @alias STK.core.json.queryToJson
+ * @id queryToJson
  * @param {Json} JSON
  * @param {Boolean} isEncode
  * @return {String} querystring
  * @author Robin Young | yonglin@staff.sina.com.cn
  * @example
  * var q1 = 'a=1&b=2&c=3';
- * STK.core.json.queryToJson(q1) === {'a':1,'b':2,'c':3};
+ * queryToJson(q1) === {'a':1,'b':2,'c':3};
  */
 var trim = require('../str/trim');
 
