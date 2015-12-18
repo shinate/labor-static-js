@@ -9,7 +9,7 @@
  * @return {Array} 索引值的数组
  * @example
  * var li1 = ['a','b','c','a']
- * var li2 = NS.findout(li1,'a');
+ * var li2 = findout(li1,'a');
  */
 module.exports = function (o, value) {
     if (!isArray(o)) {

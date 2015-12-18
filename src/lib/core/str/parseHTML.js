@@ -1,12 +1,11 @@
 /**
  * parse HTML
- * @id STK.core.str.parseHTML
- * @alias STK.core.str.parseHTML
+ *
  * @param {String} str
  * @return {Array} ret
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
- * STK.core.str.parseHTML('<div></div>') === [["<div>", "", "div", ""], ["</div>", "/", "div", ""]];
+ * parseHTML('<div></div>') === [["<div>", "", "div", ""], ["</div>", "/", "div", ""]];
  */
 module.exports = function (htmlStr) {
     var tags = /[^<>]+|<(\/?)([A-Za-z0-9]+)([^<>]*)>/g;

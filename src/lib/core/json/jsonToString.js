@@ -1,13 +1,13 @@
 /**
  * From json.org
- * @id jsonToStr
+ *
  * @param {Object|Json} value
  * @param {Function} replacer
  * @param {Number|String} space
  * @return {String} json字符串
  * @author Json.org
  * @example
- var b = jsonToStr({test:'test'},null,4);
+ * var b = jsonToStr({test:'test'},null,4);
  */
 function f(n) {
     // Format integers to have at least two digits.

@@ -1,12 +1,11 @@
 /**
  * 全角字转半角字
- * @id STK.core.str.dbcToSbc
- * @alias STK.core.str.dbcToSbc
+ *
  * @param {String} str
  * @return {String} str
- * @author yuwei | yuwei@staff.sina.com.cn
+ * @author shine.wangrs@gmail.com
  * @example
- * STK.core.str.dbcToSbc('ＳＡＡＳＤＦＳＡＤＦ') === 'SAASDFSADF';
+ * dbcToSbc('ＳＡＡＳＤＦＳＡＤＦ') === 'SAASDFSADF';
  */
 module.exports = function (str) {
     return str.replace(/[\uff01-\uff5e]/g, function (a) {

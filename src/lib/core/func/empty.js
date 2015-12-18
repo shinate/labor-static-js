@@ -1,7 +1,7 @@
 /**
  * empty function
  * @id empty
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
  * var a = {'onError':empty}
  */

@@ -1,11 +1,10 @@
 /**
  * insert html
- * @id insertHTML
  *
  * @param {HTML Element} node
  * @param {String} target
  * @param {String} where beforebegin/afterbegin/beforeend/afterend
- *
+ * @author shinate | shine.wangrs@gmail.com
  * @example
  * insertHTML(node,'<div></div>','beforebegin');
  * insertHTML(node,'<div></div>','AfterBegin');

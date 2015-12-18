@@ -1,5 +1,6 @@
 /**
  * Get byte length
+ *
  * @param {String} str
  * @return {Number} n
  * @example

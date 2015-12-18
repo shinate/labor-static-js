@@ -7,7 +7,7 @@
  * @param {Array} o
  * @return {Array}
  * @example
- * var li = NS.clear([1, 2, 3, undefined]);
+ * var li = clear([1, 2, 3, undefined]);
  * li === [1,2,3];
  */
 var findout = require('./findout');

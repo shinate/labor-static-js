@@ -1,13 +1,12 @@
 /**
  * set Elements style
- * @id STK.core.dom.setStyle
- * @alias STK.core.dom.setStyle
+ *
  * @param {Element} node
  * @param {String} property
  * @param {String} val
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
- * STK.core.dom.setStyle($.E('test'),'display','none');
+ * setStyle($.E('test'),'display','none');
  */
 function supportFilters() {
     if ('y' in supportFilters) {

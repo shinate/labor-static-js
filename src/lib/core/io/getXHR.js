@@ -1,8 +1,8 @@
 /**
  * Get a XMLHttpRequest object
- * @id getXHR
+ *
  * @return {object} XMLHttpRequest
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
  * var xhr = getXHR();
  */

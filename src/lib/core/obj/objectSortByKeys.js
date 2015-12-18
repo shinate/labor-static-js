@@ -1,4 +1,5 @@
 var objectKeys = require('./objectKeys');
+
 module.exports = function (obj, type) {
     type != null && ( type = type.toLowerCase());
     var sortRule = objectKeys(obj);

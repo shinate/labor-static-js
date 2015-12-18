@@ -1,17 +1,16 @@
 /**
  * 在指定位置写入dom对象
  * 注意,使用此方法进行写入时,使用的是appendChild方法,所以不会存在两份dom元素
- * @id STK.core.dom.insertElement
- * @alias STK.core.dom.insertElement
+ *
  * @param {Element} node
  * @param {Element} element 需要写入的节点
  * @param {String} where beforebegin/afterbegin/beforeend/afterend
- * @author FlashSoft | fangchao@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
- * STK.core.dom.insertElement($.E('test'),document.createElement('input'),'beforebegin');
- * STK.core.dom.insertElement($.E('test'),document.createElement('input'),'afterbegin');
- * STK.core.dom.insertElement($.E('test'),document.createElement('input'),'beforeend');
- * STK.core.dom.insertElement($.E('test'),document.createElement('input'),'afterend');
+ * insertElement(targetElement, newElement, 'beforebegin');
+ * insertElement(targetElement, newElement, 'afterbegin');
+ * insertElement(targetElement, newElement, 'beforeend');
+ * insertElement(targetElement, newElement, 'afterend');
  */
 module.exports = function (node, element, where) {
 

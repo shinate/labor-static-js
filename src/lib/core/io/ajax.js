@@ -1,7 +1,6 @@
 /**
  * Make an ajax request
- * @id ajax
- * @alias ajax
+ *
  * @param {Object}    {
 		'url': '',
 		'charset': 'UTF-8',
@@ -17,7 +16,7 @@
         'nocache': false
 	};
  * @return {Void}
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
  * ajax({
 	'url':'/ajax.php',

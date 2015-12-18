@@ -1,13 +1,12 @@
 /**
  * from https://github.com/douglascrockford/JSON-js
- * @id STK.core.json.strToJson
- * @alias STK.core.json.strToJson
+ *
  * @param {String} source
  * @param {Function} reviver
  * @return {Object|Json} value
  * @author Json.org
  * @example
- *   var b = STK.core.json.strToJson('{"test":"test"}');
+ * var b = strToJson('{"test":"test"}');
  */
 
 var cx = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g;

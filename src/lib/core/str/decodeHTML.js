@@ -1,18 +1,13 @@
 /**
  * decode HTML
- * @id STK.core.str.decodeHTML
- * @alias STK.core.str.decodeHTML
+ *
  * @param {String} str
  * @return {String} str
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
- * STK.core.str.decodeHTML('&amp;&lt;&gt;&quot;$nbsp;') === '&<>" ';
+ * decodeHTML('&amp;&lt;&gt;&quot;$nbsp;') === '&<>" ';
  */
 module.exports = function (str) {
-    // var div = document.createElement('div');
-    // 		div.innerHTML = str;
-    // 		return div.innerText == undefined ? div.textContent : div.innerText;
-    //	modify by Robin Young | yonglin@staff.sina.com.cn
     if (typeof str !== 'string') {
         throw 'decodeHTML need a string as parameter';
     }

@@ -1,13 +1,12 @@
 /**
  * get querykey's value
- * @id STK.core.str.queryString
- * @alias STK.core.str.queryString
+ *
  * @param {String} sKey
  * @param {Object} oOpts
  * @return {String} str
- * @author FlashSoft | fangchao@staff.sina.com.cn
+ * @author shine.wangrs@gmail.com
  * @example
- * STK.core.str.queryString('author',{'source':'author=flashsoft&test=1'}) === 'flashsoft';
+ * queryString('author',{'source':'author=flashsoft&test=1'}) === 'flashsoft';
  */
 
 var extend = require('../obj/extend');

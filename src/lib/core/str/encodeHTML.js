@@ -1,18 +1,13 @@
 /**
  * encode HTML
- * @id STK.core.str.encodeHTML
- * @alias STK.core.str.encodeHTML
+ *
  * @param {String} str
  * @return {String} str
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
- * STK.core.str.encodeHTML('&<>" ') === '&amp;&lt;&gt;&quot;$nbsp;';
+ * encodeHTML('&<>" ') === '&amp;&lt;&gt;&quot;$nbsp;';
  */
 module.exports = function (str) {
-    // var div = document.createElement('div');
-    // 		div.appendChild(document.createTextNode(str));
-    // 		return div.innerHTML.replace(/\s/g, '&nbsp;').replace(/"/g, "&quot;");
-    //	modify by Robin Young | yonglin@staff.sina.com.cn
     if (typeof str !== 'string') {
         throw 'encodeHTML need a string as parameter';
     }

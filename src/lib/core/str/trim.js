@@ -1,5 +1,6 @@
 /**
  * delete the space at the beginning and end of the string
+ *
  * @param {String} str
  * @return {String} str
  */

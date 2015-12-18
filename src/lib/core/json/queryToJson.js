@@ -1,10 +1,10 @@
 /**
  * query to json
- * @id queryToJson
+ *
  * @param {Json} JSON
  * @param {Boolean} isEncode
  * @return {String} querystring
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
  * var q1 = 'a=1&b=2&c=3';
  * queryToJson(q1) === {'a':1,'b':2,'c':3};

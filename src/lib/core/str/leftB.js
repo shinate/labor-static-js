@@ -1,13 +1,12 @@
 /**
  * 从左到右取字符串，中文算两个字符.
- * @id STK.core.str.leftB
- * @alias STK.core.str.leftB
+ *
  * @param {String} str
  * @param {Number} lens
  * @return {String} str
- * @author Robin Young | yonglin@staff.sina.com.cn
+ * @author shinate | shine.wangrs@gmail.com
  * @example
- * STK.core.str.leftB( '世界真和谐'， 6 ) === '世界真';//向汉编致敬
+ * leftB( '世界真和谐'， 6 ) === '世界真';//向汉编致敬
  */
 var bLength = require('./bLength');
 
