@@ -1,8 +1,5 @@
-var isArray = require('./core/arr/isArray');
-var hashCode = require('./core/codec/hashCode');
-
-var dispatchList = global['__CHANNEL__'] != null ? global['__CHANNEL__'] : (global['__CHANNEL__'] = {});
-var bindList = global['__CHANNEL_BIND__'] != null ? global['__CHANNEL_BIND__'] : (global['__CHANNEL_BIND__'] = {});
+var dispatchList = window['__CHANNEL__'] != null ? window['__CHANNEL__'] : (window['__CHANNEL__'] = {});
+var bindList = window['__CHANNEL_BIND__'] != null ? window['__CHANNEL_BIND__'] : (window['__CHANNEL_BIND__'] = {});
 var fireTaskList = [];
 
 var runFireTaskList = function () {
@@ -68,10 +65,10 @@ var it = {
     'bind': function (listen, fire, append) {
         if (!(
                 listen != null
-                && isArray(listen)
+                && listen instanceof Array
                 && listen.length === 2
                 && fire != null
-                && isArray(fire)
+                && fire instanceof Array
                 && fire.length === 2
             )) {
             throw new Error('Parameter error, must be Array(2), Array(2)');
@@ -82,17 +79,12 @@ var it = {
             it.fire(fire[0], fire[1], [].concat(Array.prototype.slice.call(arguments), append || []));
         };
 
-        var hashKey = [
-            hashCode(listen[0]),
-            hashCode(listen[1]),
-            hashCode(fire[0]),
-            hashCode(fire[1])
-        ].join('|')
+        var hashKey = [].concat(listen, fire).join('|');
 
-        if (!isArray(bindList[hashKey])) {
+        if (!(bindList[hashKey] instanceof Array)) {
             bindList[hashKey] = [];
         }
-        
+
         bindList[hashKey].push(callBack);
 
         it.register(listen[0], listen[1], callBack);
@@ -101,23 +93,18 @@ var it = {
     unBind: function (listen, fire) {
         if (!(
                 listen != null
-                && isArray(listen)
+                && listen instanceof Array
                 && listen.length === 2
                 && fire != null
-                && isArray(fire)
+                && fire instanceof Array
                 && fire.length === 2
             )) {
             throw new Error('Parameter error, must be Array(2), Array(2)');
         }
 
-        var hashKey = [
-            hashCode(listen[0]),
-            hashCode(listen[1]),
-            hashCode(fire[0]),
-            hashCode(fire[1])
-        ].join('|');
+        var hashKey = [].concat(listen, fire).join('|');
 
-        if (isArray(bindList[hashKey]) && bindList[hashKey].length) {
+        if ((bindList[hashKey] instanceof Array) && bindList[hashKey].length) {
             for (var i = 0, len = bindList[hashKey].length; i < len; i++) {
                 it.remove(listen[0], listen[1], bindList[hashKey][i]);
             }

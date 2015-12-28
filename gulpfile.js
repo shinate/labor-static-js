@@ -14,6 +14,8 @@ var amdClean = require('amdclean');
 var rjs = require('requirejs');
 var Q = require('q');
 var path = require('path');
+var HM = require('head-master');
+var through = require('through-gulp');
 
 var CONF = {
     src: './src',
@@ -29,11 +31,22 @@ var CONF = {
 };
 
 gulp.task('unit', function () {
-    gulp.src(CONF.src + '/**/*.js')
-        .pipe(function(){
 
-        })
-        .pipe(gulp.dest(CONF.package))
+    var hm = new HM({
+        baseDir: CONF.src
+    });
+
+    return gulp.src([CONF.src + '/**/*.js'])
+        .pipe(through.map(function (n) {
+            n.contents = new Buffer(hm.pack(
+                path.relative(n.base, path.join(path.dirname(n.history[0]), path.basename(n.history[0], '.js'))), {
+                    uglify: false,
+                    type: 1
+                }
+            ));
+            return n;
+        }))
+        .pipe(gulp.dest(CONF.dist));
 });
 
 gulp.task('default', function () {
